@@ -1,0 +1,114 @@
+﻿Health {
+    position: absolute;
+    left: 30;
+    bottom: 24;
+    height: 70;
+    width: 192;
+    padding: 0 20;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+/*    backdrop-filter: blur( 20 );*/
+    border-radius: 10;
+
+    &.hidden {
+        display: none;
+    }
+}
+
+Suit {
+    position: absolute;
+    left: 260;
+    bottom: 24;
+    height: 70;
+    width: 192;
+    padding: 0 20;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+/*    backdrop-filter: blur( 20 );*/
+    border-radius: 10;
+
+    &.hidden {
+        display: none;
+    }
+}
+
+AmmoDisplay {
+    position: absolute;
+    right: 30;
+    bottom: 24;
+    height: 70;
+    width: 248;
+    padding: 0 20;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    /*    backdrop-filter: blur( 20 );*/
+    border-radius: 10;
+
+
+    &.hideAmmoDisplay {
+        display: none;
+    }
+}
+
+.AmmoTypeIcon {
+    bottom: 10;
+    left: 0;
+    font-size: 50px;
+    font-family: HalfLife2;
+    font-weight: bold;
+    color: rgba(255, 220, 0, 0.7);
+}
+
+.AmmoNumber {
+    font-size: 48px;
+    position: absolute;
+    left: 80;
+    font-family: HalfLife2;
+    color: rgba(255, 220, 0, 0.7);
+}
+
+.ReserveNumber {
+    font-size: 28;
+    position: absolute;
+    left: 175;
+    bottom: 8;
+    font-family: HalfLife2;
+    color: rgba(255, 220, 0, 0.7);
+}
+
+.HASIdent {
+    position: absolute;
+    bottom: 14;
+    left: 16;
+    font-size: 13px;
+    font-family: Verdana;
+    font-weight: bold;
+    color: rgba(255, 220, 0, 0.7);
+}
+
+.HASNumbers {
+    font-size: 48px;
+    position: absolute;
+    left: 92;
+    font-family: HalfLife2;
+    color: rgba(255, 220, 0, 0.7);
+}
+
+Crosshair {
+    color: white;
+    font-family: HalfLife2;
+    font-size: 38;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    &.hidden {
+        display: none;
+    }
+}
+
+rootpanel {
+    background-color: rgba( #333, 0 );
+    transition: background-color 0.2s ease-in;
+}

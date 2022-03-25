@@ -1,0 +1,9 @@
+.codegen
+obj
+accesslist.txt
+*.csproj
+launchSettings.json
+*.dll
+*.pdb
+.intermediate/net5.0/sandbox.deps.json
+.vs/*
