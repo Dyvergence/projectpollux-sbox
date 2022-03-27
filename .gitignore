@@ -7,3 +7,5 @@ launchSettings.json
 *.pdb
 .intermediate/net5.0/sandbox.deps.json
 .vs/*
+.vscode/*
+*.code-workspace
