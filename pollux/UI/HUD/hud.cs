@@ -7,7 +7,7 @@ namespace ProjectPollux.UI.HUD
 	public partial class HL2Hud : HudEntity<RootPanel>
 	{
 		/// <summary>
-		/// A HUD designed to look and feel similar to the HUD from HL2. Only tested at 4K 150% scaling.
+		/// A HUD designed to look and feel similar to the HUD from HL2.
 		/// </summary>
 		public HL2Hud()
 		{

@@ -25,11 +25,6 @@ namespace ProjectPollux.Entities.Weapons
 		public override float SwingForce => 25f;
 		public override float DamageDistance => 35f;
 		public override float ImpactSize => 10f;
-
-		public HL2Crowbar()
-		{
-			
-		}
 	}
 
 	[Library( "weapon_pistol", Title = "Pistol", Description = "A pistol." )]

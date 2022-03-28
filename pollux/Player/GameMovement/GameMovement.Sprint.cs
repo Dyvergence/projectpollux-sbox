@@ -12,8 +12,6 @@ public partial class PolluxGameMovement
 	public float TimeToSprint => .1f;
 	public float SprintTime { get; set; }
 
-	public float SprintProgress => SprintTime / TimeToSprint;
-
 	public virtual void SimulateSprinting()
 	{
 		if ( WishSprint() )
