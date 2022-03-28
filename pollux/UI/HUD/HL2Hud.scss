@@ -31,6 +31,22 @@ Suit {
         display: none;
     }
 }
+AuxPower {
+    position: absolute;
+    left: 30;
+    bottom: 105;
+    height: 70;
+    width: 192;
+    padding: 0 20;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+/*    backdrop-filter: blur( 20 );*/
+    border-radius: 10;
+
+    &.hidden {
+        display: none;
+    }
+}
 
 AmmoDisplay {
     position: absolute;

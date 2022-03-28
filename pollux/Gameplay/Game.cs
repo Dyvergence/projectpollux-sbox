@@ -24,16 +24,6 @@ namespace ProjectPollux.Gameplay
 				Hud = new UI.HUD.HL2Hud();
 		}
 
-		[Event.Hotload]
-		public void ReloadUI()
-		{
-			if ( IsServer )
-			{
-				Hud.Delete();
-				Hud = new UI.HUD.HL2Hud();
-			}
-		}
-
 		public override void DeclareGameTeams()
 		{
 			Source1.TeamManager.DeclareTeam( 0, "unassigned", "UNASSIGNED", Color.White, true, true );

@@ -1,19 +1,20 @@
-﻿using Sandbox;
+// TODO: Make more like the AUX power HUD element from HL2.
+using Sandbox;
 using Sandbox.UI;
 using Sandbox.UI.Construct;
 
 namespace ProjectPollux.UI.HUD
 {
-	public class Health : Panel
+    public class AuxPower : Panel
 	{
-		public Label HealthAmountLabel;
+		public Label AuxAmountLabel;
 
 		public Label PanelIdent;
 
-		public Health()
+		public AuxPower()
 		{
-			PanelIdent = Add.Label( "HEALTH", "HASIdent" );
-			HealthAmountLabel = Add.Label( "100", "HASNumbers" );
+			PanelIdent = Add.Label( "AUX POWER", "HASIdent" );
+			AuxAmountLabel = Add.Label( "100", "HASNumbers" );
 		}
 
 		public override void Tick()
@@ -28,7 +29,7 @@ namespace ProjectPollux.UI.HUD
 				SetClass( "hidden", player.LifeState != LifeState.Alive );
 			}
 
-			HealthAmountLabel.Text = $"{player.Health.CeilToInt()}";
+			AuxAmountLabel.Text = $"{player.AuxPower.CeilToInt()}";
 		}
 	}
 }

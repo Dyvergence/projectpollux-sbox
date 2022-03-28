@@ -25,4 +25,5 @@ public class HealthChargerSounds
 public class SuitSounds
 {
 	static SoundEvent EquipSuit = new( "sounds/hl1/fvox/bell.vsnd" );
+	static SoundEvent SprintStart = new( "sounds/player/suit_sprint.vsnd" );
 }

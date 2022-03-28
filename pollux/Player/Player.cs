@@ -1,4 +1,5 @@
 ﻿using ProjectPollux.Entities.Weapons;
+using ProjectPollux.Player.GameMovement;
 using ProjectPollux.Player.Inventory;
 using Sandbox;
 using Source1;
@@ -12,18 +13,15 @@ namespace ProjectPollux
 {
 	public partial class PolluxPlayer : Source1Player
 	{
-		public static new PolluxPlayer LocalPlayer => Local.Pawn as PolluxPlayer;
-
 		public PolluxPlayer()
 		{
 			Inventory = new PolluxInventoryBase( this );
+			Controller = new PolluxGameMovement();
 		}
 
 		public override void Spawn()
 		{
 			base.Spawn();
-
-			CameraMode = new PolluxCamera();
 		}
 
 		public override void Respawn()
@@ -31,11 +29,6 @@ namespace ProjectPollux
 			base.Respawn();
 
 			ArmorValue = 0;
-			// MaxArmorValue = MaxArmorValue;
-			//Inventory.Add( new HL2Pistol(), true );
-			//Inventory.Add( new HL2Crowbar(), false );
-
-			//GiveAmmo( SWB_Base.AmmoType.Pistol, 30 );
 		}
 
 		public static class PlayerTags
@@ -44,6 +37,8 @@ namespace ProjectPollux
 			public const string WaterJump = "waterjump";
 			public const string Noclipped = "noclipped";
 			public const string SuitEquipped = "suitequipped";
+			public const string Sprinted = "sprinted";
+			public const string FlashlightOn = "flashlighton";
 		}
 	}
 }

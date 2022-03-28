@@ -21,6 +21,8 @@ namespace ProjectPollux.UI.HUD
 			RootPanel.AddChild<Suit>();
 
 			RootPanel.AddChild<Crosshair>();
+
+			RootPanel.AddChild<AuxPower>();
 		}
 
 	}
