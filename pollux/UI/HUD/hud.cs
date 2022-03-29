@@ -25,5 +25,19 @@ namespace ProjectPollux.UI.HUD
 			RootPanel.AddChild<AuxPower>();
 		}
 
+		[ConVar.Replicated( "cl_drawhud", Help = "Enable the rendering of the hud")]
+		public static bool ShouldDisplay { get; set; } = true;
+
+		[Event.Tick]
+		public void Tick()
+		{
+			if ( !IsClient )
+				return;
+			if ( Local.Pawn is not PolluxPlayer)
+				return;
+
+			RootPanel.SetClass( "hidden", !ShouldDisplay );
+		}
+
 	}
 }
