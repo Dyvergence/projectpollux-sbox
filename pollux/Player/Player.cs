@@ -29,6 +29,8 @@ namespace ProjectPollux
 			base.Respawn();
 
 			ArmorValue = 0;
+
+			AuxPower = 100;
 		}
 
 		public static class PlayerTags

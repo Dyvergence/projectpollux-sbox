@@ -1,13 +1,13 @@
 ﻿Health {
     position: absolute;
-    left: 30;
-    bottom: 24;
+    left: 36;
+    bottom: 28;
     height: 70;
     width: 192;
     padding: 0 20;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.3);
-/*    backdrop-filter: blur( 20 );*/
+    /*    backdrop-filter: blur( 20 );*/
     border-radius: 10;
 
     &.hidden {
@@ -17,31 +17,56 @@
 
 Suit {
     position: absolute;
-    left: 260;
-    bottom: 24;
+    left: 278;
+    bottom: 28;
     height: 70;
     width: 192;
     padding: 0 20;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.3);
-/*    backdrop-filter: blur( 20 );*/
+    /*    backdrop-filter: blur( 20 );*/
     border-radius: 10;
 
     &.hidden {
         display: none;
     }
 }
+
 AuxPower {
     position: absolute;
-    left: 30;
-    bottom: 105;
-    height: 70;
+    display: flex;
+    flex-direction: column;
+    left: 36;
+    bottom: 112;
+    height: 50;
     width: 192;
     padding: 0 20;
-    align-items: center;
     background-color: rgba(0, 0, 0, 0.3);
-/*    backdrop-filter: blur( 20 );*/
+    // backdrop-filter: blur( 20 );
     border-radius: 10;
+
+    .AuxPanelIdent {
+        top: 4;
+        font-size: 13;
+        font-family: Verdana;
+        font-weight: bold;
+        color: rgba(255, 220, 0, 0.7);
+    }
+
+    .AuxPowerBlocksPanel { // TODO: Add a gap between the blocks once either https://github.com/Facepunch/sbox-issues/issues/1713 is resolved or an alternative solution is found
+        margin-top: 8;
+        width: 100%;
+
+        .AuxPowerBlock {
+            background-color: rgba(255, 220, 0, 0.7);
+            width: 14;
+            height: 10;
+
+            &.disabled {
+                background-color: rgba(255, 220, 0, 0.3);
+            }
+        }
+    }
 
     &.hidden {
         display: none;
@@ -50,16 +75,15 @@ AuxPower {
 
 AmmoDisplay {
     position: absolute;
-    right: 30;
-    bottom: 24;
+    right: 36;
+    bottom: 28;
     height: 70;
-    width: 248;
+    width: 297;
     padding: 0 20;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.3);
     /*    backdrop-filter: blur( 20 );*/
     border-radius: 10;
-
 
     &.hideAmmoDisplay {
         display: none;
@@ -69,16 +93,16 @@ AmmoDisplay {
 .AmmoTypeIcon {
     bottom: 10;
     left: 0;
-    font-size: 50px;
+    font-size: 50;
     font-family: HalfLife2;
     font-weight: bold;
     color: rgba(255, 220, 0, 0.7);
 }
 
 .AmmoNumber {
-    font-size: 48px;
+    font-size: 50;
     position: absolute;
-    left: 80;
+    left: 97;
     font-family: HalfLife2;
     color: rgba(255, 220, 0, 0.7);
 }
@@ -86,7 +110,7 @@ AmmoDisplay {
 .ReserveNumber {
     font-size: 28;
     position: absolute;
-    left: 175;
+    right: 42;
     bottom: 8;
     font-family: HalfLife2;
     color: rgba(255, 220, 0, 0.7);
@@ -94,18 +118,18 @@ AmmoDisplay {
 
 .HASIdent {
     position: absolute;
-    bottom: 14;
-    left: 16;
-    font-size: 13px;
+    bottom: 15;
+    left: 19;
+    font-size: 14;
     font-family: Verdana;
     font-weight: bold;
     color: rgba(255, 220, 0, 0.7);
 }
 
 .HASNumbers {
-    font-size: 48px;
+    font-size: 48;
     position: absolute;
-    left: 92;
+    left: 91;
     font-family: HalfLife2;
     color: rgba(255, 220, 0, 0.7);
 }
@@ -125,6 +149,6 @@ Crosshair {
 }
 
 rootpanel {
-    background-color: rgba( #333, 0 );
+    background-color: rgba(#333, 0);
     transition: background-color 0.2s ease-in;
 }

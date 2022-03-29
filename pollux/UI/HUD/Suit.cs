@@ -23,7 +23,7 @@ namespace ProjectPollux.UI.HUD
 
 			SetClass( "hidden", true );
 
-			if ( player.IsSuitEquipped )
+			if ( player.IsSuitEquipped && player.ArmorValue > 0)
 			{
 				SetClass( "hidden", player.LifeState != LifeState.Alive );
 			}

@@ -14,7 +14,6 @@ partial class PolluxPlayer
 	public void EquipSuit()
 	{
 		Tags.Add( "suitequipped" );
-		AuxPower = 100;
 	}
 
 	public bool IsSuitEquipped => Tags.Has( PlayerTags.SuitEquipped );
