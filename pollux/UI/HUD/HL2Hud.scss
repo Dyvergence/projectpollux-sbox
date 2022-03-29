@@ -3,11 +3,12 @@
     left: 36;
     bottom: 28;
     height: 70;
-    width: 192;
+    width: 228;
+    height: 80;
     padding: 0 20;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.3);
-    /*    backdrop-filter: blur( 20 );*/
+    // backdrop-filter: blur( 20 );
     border-radius: 10;
 
     &.hidden {
@@ -17,14 +18,15 @@
 
 Suit {
     position: absolute;
-    left: 278;
+    left: 314;
     bottom: 28;
     height: 70;
-    width: 192;
+    width: 228;
+    height: 80;
     padding: 0 20;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.3);
-    /*    backdrop-filter: blur( 20 );*/
+    // backdrop-filter: blur( 20 );
     border-radius: 10;
 
     &.hidden {
@@ -37,30 +39,32 @@ AuxPower {
     display: flex;
     flex-direction: column;
     left: 36;
-    bottom: 112;
+    bottom: 122;
     height: 50;
-    width: 192;
-    padding: 0 20;
+    width: 228;
+    height: 58;
+    padding: 0 18;
+    padding-top: 10;
     background-color: rgba(0, 0, 0, 0.3);
     // backdrop-filter: blur( 20 );
     border-radius: 10;
 
     .AuxPanelIdent {
-        top: 4;
-        font-size: 13;
+        font-size: 14;
         font-family: Verdana;
         font-weight: bold;
         color: rgba(255, 220, 0, 0.7);
     }
 
-    .AuxPowerBlocksPanel { // TODO: Add a gap between the blocks once either https://github.com/Facepunch/sbox-issues/issues/1713 is resolved or an alternative solution is found
-        margin-top: 8;
+    .AuxPowerBlocksPanel {
+        margin-top: 3;
         width: 100%;
 
         .AuxPowerBlock {
             background-color: rgba(255, 220, 0, 0.7);
-            width: 14;
-            height: 10;
+            width: 13;
+            height: 9;
+            margin-right: 6;
 
             &.disabled {
                 background-color: rgba(255, 220, 0, 0.3);
@@ -79,10 +83,11 @@ AmmoDisplay {
     bottom: 28;
     height: 70;
     width: 297;
+    height: 80;
     padding: 0 20;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.3);
-    /*    backdrop-filter: blur( 20 );*/
+    // backdrop-filter: blur( 20 );
     border-radius: 10;
 
     &.hideAmmoDisplay {
@@ -127,9 +132,9 @@ AmmoDisplay {
 }
 
 .HASNumbers {
-    font-size: 48;
+    font-size: 56;
     position: absolute;
-    left: 91;
+    left: 116;
     font-family: HalfLife2;
     color: rgba(255, 220, 0, 0.7);
 }

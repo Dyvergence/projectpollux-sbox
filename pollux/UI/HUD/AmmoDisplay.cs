@@ -3,10 +3,6 @@ using Sandbox.UI;
 using Sandbox.UI.Construct;
 using SWB_Base;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ProjectPollux.UI.HUD
 {
@@ -20,12 +16,12 @@ namespace ProjectPollux.UI.HUD
 
 		public Label AmmoTypeIcon;
 
-		public AmmoDisplay( string ammoTypeIcon )
+		public AmmoDisplay()
 		{
 			PanelIdent = Add.Label( "AMMO", "HASIdent" );
 			ClipAmountLabel = Add.Label( "18", "AmmoNumber" );
 			ReserveAmountLabel = Add.Label( "150", "ReserveNumber" );
-			AmmoTypeIcon = Add.Label( ammoTypeIcon, "AmmoTypeIcon" );
+			AmmoTypeIcon = Add.Label( "�", "AmmoTypeIcon" );
 		}
 
 		public override void Tick()
@@ -36,9 +32,25 @@ namespace ProjectPollux.UI.HUD
 			var weapon = player.ActiveChild as WeaponBase;
 			bool isValidWeapon = weapon != null;
 
-			SetClass( "hideAmmoDisplay", !isValidWeapon );
+			if ( !isValidWeapon )
+				return;
 
-			if ( !isValidWeapon ) return;
+			if ( !player.IsSuitEquipped )
+				SetClass( "hideAmmoDisplay", true );
+			else
+				SetClass( "hideAmmoDisplay", false );
+
+			string ammoTypeIcon() => weapon.Primary.AmmoType switch
+			{
+				AmmoType.Pistol => "p",
+				AmmoType.Buckshot => "s",
+				AmmoType.PulseRifle => "u",
+				AmmoType.SMG1 => "r",
+				AmmoType.ThreeFiveSeven => "q",
+				_ => "�",
+			};
+
+			AmmoTypeIcon.Text = ammoTypeIcon();
 
 			var hasClipSize = weapon.Primary.ClipSize > 0;
 			var reserveAmmo = Math.Min( player.AmmoCount( weapon.Primary.AmmoType ), 999 );

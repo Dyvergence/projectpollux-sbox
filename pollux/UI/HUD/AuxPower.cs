@@ -1,4 +1,3 @@
-// TODO: Make more like the AUX power HUD element from HL2.
 using Sandbox;
 using Sandbox.UI;
 using Sandbox.UI.Construct;

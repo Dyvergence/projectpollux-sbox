@@ -187,7 +187,6 @@ partial class PolluxPlayer
 		{
 			if ( Tags.Has( PlayerTags.Sprinted ) && (!Tags.Has(PlayerTags.FlashlightOn)) ) // Sprint is active but flashlight is off
 			{
-				// TODO: Add sprint tag to AUX HUD
 				if ( Velocity.x is not 0 && Velocity.y is not 0 ) // Player is requesting sprint and actively on the run
 				{
 					SuitPower_Drain( AuxPowerLoad * Time.Delta );

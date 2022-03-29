@@ -1,13 +1,6 @@
-﻿using ProjectPollux.Entities.Weapons;
-using ProjectPollux.Player.GameMovement;
+﻿using ProjectPollux.Player.GameMovement;
 using ProjectPollux.Player.Inventory;
-using Sandbox;
 using Source1;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ProjectPollux
 {
