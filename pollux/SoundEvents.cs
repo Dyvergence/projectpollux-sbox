@@ -26,3 +26,23 @@ public class SuitSounds
 	static SoundEvent EquipSuit = new( "sounds/hl1/fvox/bell.vsnd" );
 	static SoundEvent SprintStart = new( "sounds/player/suit_sprint.vsnd" );
 }
+
+public class Weapon_Crowbar
+{
+	static SoundEvent Single = new( "sounds/weapons/iceaxe/iceaxe_swing1.vsnd" );
+	static SoundEvent Melee_HitWorld = new( "sounds/weapons/crowbar/crowbar_impact1.vsnd" );
+}
+
+public class Weapon_Pistol
+{
+	static SoundEvent Empty = new( "sounds/weapons/pistol/pistol_empty.vsnd" );
+	static SoundEvent Single = new( "sounds/weapons/pistol/pistol_fire2.vsnd" );
+	static SoundEvent Reload = new( "sounds/weapons/pistol/pistol_reload1.vsnd" );
+}
+
+public class Weapon_SMG1
+{
+	static SoundEvent Single = new( "sounds/weapons/smg1/smg1_fire1.vsnd" );
+	static SoundEvent Melee_HitWorld = new( "sounds/weapons/ar2/ar2_altfire.vsnd" );
+	static SoundEvent Reload = new( "sounds/weapons/smg1/smg1_reload.vsnd" );
+}

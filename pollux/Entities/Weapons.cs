@@ -65,7 +65,7 @@ namespace ProjectPollux.Entities.Weapons
 				Force = 5f,
 				Spread = 0.05f,
 				Recoil = 0.5f,
-				RPM = 300,
+				RPM = 600,
 				FiringType = FiringType.semi,
 
 				DryFireSound = "Weapon_Pistol.Empty",
@@ -109,15 +109,15 @@ namespace ProjectPollux.Entities.Weapons
 				Force = 5f,
 				Spread = 0.06f,
 				Recoil = 1f,
-				RPM = 600,
+				RPM = 800,
 				FiringType = FiringType.auto,
 
 				DryFireSound = "Weapon_SMG1.Empty",
 				ShootSound = "Weapon_SMG1.Single",
 
-				BulletEjectParticle = "particles/smg_ejectbrass.vpcf",
+				BulletEjectParticle = "particles/pistol_ejectbrass.vpcf",
 				BulletTracerParticle = null,
-				MuzzleFlashParticle = "particles/smg_muzzleflash.vpcf",
+				MuzzleFlashParticle = "particles/pistol_muzzleflash.vpcf",
 				BarrelSmokeParticle = null
 			};
 		}

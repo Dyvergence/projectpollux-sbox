@@ -168,7 +168,7 @@ namespace SWB_Base
             if (IsReloading || IsAnimating || InBoltBack || IsShooting())
                 return;
 
-            var maxClipSize = BulletCocking ? Primary.ClipSize + 1 : Primary.ClipSize;
+            var maxClipSize = BulletCocking ? Primary.ClipSize : Primary.ClipSize;
 
             if (Primary.Ammo >= maxClipSize || Primary.ClipSize == -1)
                 return;
@@ -201,7 +201,7 @@ namespace SWB_Base
         public virtual void OnReloadFinish()
         {
             IsReloading = false;
-            var maxClipSize = BulletCocking && Primary.Ammo > 0 ? Primary.ClipSize + 1 : Primary.ClipSize;
+            var maxClipSize = BulletCocking && Primary.Ammo > 0 ? Primary.ClipSize : Primary.ClipSize;
 
             if (Primary.InfiniteAmmo == InfiniteAmmoType.reserve)
             {

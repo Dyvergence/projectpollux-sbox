@@ -1,4 +1,5 @@
-﻿using ProjectPollux.Player.GameMovement;
+﻿using Pollux.Player.Camera;
+using ProjectPollux.Player.GameMovement;
 using ProjectPollux.Player.Inventory;
 using Source1;
 
@@ -10,6 +11,7 @@ namespace ProjectPollux
 		{
 			Inventory = new PolluxInventoryBase( this );
 			Controller = new PolluxGameMovement();
+			CameraMode = new PolluxCamera();
 		}
 
 		public override void Spawn()
